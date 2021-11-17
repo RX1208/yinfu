@@ -6,9 +6,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no">
 		<title>浙传校园临时通行码</title>
-			
 			<script language="javascript">
-				
 			     var t = null;
 			     t = setTimeout(time,1000);//开始执行
 			     function time()
@@ -23,11 +21,14 @@
 			 	  //d = d < 10 ? ('0' + d) : d;
 			       var h=dt.getHours();
 			       //h=h < 10 ? ('0' + h) : h;
+			       var h1 = h-1
+		  	       var h2 = h+3
 			       var minute=dt.getMinutes();
 			       //minute = minute < 10 ? ('0' + minute) : minute;
 			       var s=dt.getSeconds();
 			       //s=s < 10 ? ('0' + s) : s;
 			       document.getElementById("timeShow").innerHTML =   m+"月" +d+"日"+ "</br>" + h+":"+minute+":"+s ;
+			       document.getElementById("timeShow1").innerHTML =  "通行时间："+y+"-"+m+"-"+d+" "+ h1+":00-"+y+"/"+m+"/"+d+" "+h+":00:00" ;
 			       t = setTimeout(time,1000); //设定定时器，循环执行            
 			     }
 			</script>
@@ -39,10 +40,6 @@
 				<td> <input type="text" style= "background-color:transparent;border:0;font-weight:bold;font-size:15px;font-family:"楷体";" name="t2" value=班级：19艺术与技术班 /> </td>
 			</div>
 			<div style =  "line-height:0.7;position:absolute;color:black;text-align:center;font-weight:bold;left:90px;top:115px;font-size:47px;font-family:"LiSu"" id="timeShow" > </div>
-			<div style = "background-color:transparent;border:0;position:absolute;left:25px;top:424px;" >
-				<td> <input type="text" style= "width:350px;background-color:transparent;border:0;font-weight:bold;font-size:14px;font-family:"楷体";" name="t2" value='通行时间：2021-11-17 16:10-2021/11/17 20:10:00 '/> </td>
-			</div>
-			
+			<div style = "background-color:transparent;border:0;position:absolute;left:25px;top:424px;font-weight:bold;" id="timeShow1" ></div>
 		</body>
-
 </html>
