@@ -42,7 +42,30 @@
 			<div style = "background-color:transparent;border:0;position:absolute;left:23px;top:353px;" >
 				<td> <input type="text" style= "width:350px;background-color:transparent;border:0;font-weight:bold;font-size:13px;font-family:"楷体";" name="t2" value='通行时间：2021-11-17 16:10-2021/11/17 20:10:00 '/> </td>
 			</div>
-		
+			<script type="text/javascript">
+				var div = document.getElementById("div1");
+				var dragFlag = false;
+				var x,y;
+				 
+				div.onmousedown = function (e) {
+					e = e || window.event;
+					x = e.clientX - div.offsetLeft;
+					y = e.clientY - div.offsetTop;
+					dragFlag = true;
+				};
+				 
+				document.onmousemove = function (e) {
+					if (dragFlag) {
+						e = e || window.event;
+						div.style.left = e.clientX - x + "px";
+						div.style.top  = e.clientY - y + "px";
+					}
+				};
+				 
+				document.onmouseup = function (e) {
+					dragFlag = false;
+				};	 
+			</script>	 
 		</body>
 
 </html>
