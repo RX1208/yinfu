@@ -14,20 +14,20 @@
        var m = dt.getMonth() ;//注意这个“+1”
   	  m = m < 10 ? ('0' + m) : m;
   	  var d = dt.getDate();
- 	  d = d < 10 ? ('0' + d) : d;
+ 	  //d = d < 10 ? ('0' + d) : d;
        var h=dt.getHours();
-       h=h < 10 ? ('0' + h) : h;
+       //h=h < 10 ? ('0' + h) : h;
        var minute=dt.getMinutes();
-       minute = minute < 10 ? ('0' + minute) : minute;
+       //minute = minute < 10 ? ('0' + minute) : minute;
        var s=dt.getSeconds();
-       s=s < 10 ? ('0' + s) : s;
+       //s=s < 10 ? ('0' + s) : s;
        document.getElementById("timeShow").innerHTML =   m+"月" +d+"日"+ "</br>" + h+":"+minute+":"+s ;
        t = setTimeout(time,1000); //设定定时器，循环执行            
     }
   </script>
 </head><body>
-<h2 style="background-color:blue;color:white;text-align:center">守护校园&emsp;&emsp;&emsp;人人有责</h2>
-<br>
-<h1 style="text-align:center" size="7" id="timeShow" ></h1>
+<h1 style="background-color:#F0CED1;color:white;text-align:center"><br>守护校园&emsp;&emsp;&emsp;人人有责<br><br></h1>
+<h1 style="background-color:white;color:black;text-align:center" id="timeShow" ><br><br><br></h1>
+ 
 </body>
 </html>
