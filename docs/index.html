@@ -38,34 +38,11 @@
 				<br>
 				<td> <input type="text" style= "background-color:transparent;border:0;font-weight:bold;font-size:15px;font-family:"楷体";" name="t2" value=班级：19艺术与技术班 /> </td>
 			</div>
-			<div id="div1" style =  "position:absolute;color:black;text-align:center;font-weight:bold;left:90px;top:110px;font-size:45px;font-family:"LiSu"" id="timeShow" > </div>
-			<div style = "background-color:transparent;border:0;position:absolute;left:23px;top:393px;" >
+			<div style =  "position:absolute;color:black;text-align:center;font-weight:bold;left:90px;top:110px;font-size:45px;font-family:"LiSu"" id="timeShow" > </div>
+			<div style = "background-color:transparent;border:0;position:absolute;left:23px;top:400px;" >
 				<td> <input type="text" style= "width:350px;background-color:transparent;border:0;font-weight:bold;font-size:14px;font-family:"楷体";" name="t2" value='通行时间：2021-11-17 16:10-2021/11/17 20:10:00 '/> </td>
 			</div>
-			<script type="text/javascript">
-				var div = document.getElementById("div1");
-				var dragFlag = false;
-				var x,y;
-				 
-				div.onmousedown = function (e) {
-					e = e || window.event;
-					x = e.clientX - div.offsetLeft;
-					y = e.clientY - div.offsetTop;
-					dragFlag = true;
-				};
-				 
-				document.onmousemove = function (e) {
-					if (dragFlag) {
-						e = e || window.event;
-						div.style.left = e.clientX - x + "px";
-						div.style.top  = e.clientY - y + "px";
-					}
-				};
-				 
-				document.onmouseup = function (e) {
-					dragFlag = false;
-				};	 
-			</script>	 
+			
 		</body>
 
 </html>
